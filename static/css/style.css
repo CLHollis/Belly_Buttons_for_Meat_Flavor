@@ -1,0 +1,58 @@
+body {
+  background-color: hsl(0, 0%, 100%);
+  color: #172A3A;
+}
+
+.jumbotron {
+  background-image: url("../images/belly_buttons_washout.jpg");
+  /* original source belly button image: https://brikwars.com/forums/viewtopic.php?t=11798 */
+  /* original source veggie burger image: https://www.thespruceeats.com/thmb/tUVLwrsjovTjOcNTG801_iJg82A=/940x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/portobello-mushroom-burger-with-avocados-3378624-hero-01-2b28fe4315934ba9b3c940ad5ab7fe17.jpg */
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+p {color: #172A3A;}
+
+h1 {color: #172A3A;
+  font-size:400%;}
+
+h2 {color: #024246;}
+
+h4 {color: #09BC8A;}
+
+h3 {color: #024246;
+  /* margin-top: 200; */
+}
+
+/* #id {background-color: hsl(0, 1%, 23%);} */
+
+.topnav {
+  background-color: #172A3A;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #508991;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #09BC8A;
+  color: white;
+}
+
+img {
+  vertical-align: text-bottom;
+}
