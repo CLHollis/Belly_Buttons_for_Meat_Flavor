@@ -56,3 +56,8 @@ h3 {color: #024246;
 img {
   vertical-align: text-bottom;
 }
+
+.caption {
+  text-align: center;
+  color: #508991;
+}
