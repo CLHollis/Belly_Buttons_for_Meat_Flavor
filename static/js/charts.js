@@ -9,7 +9,7 @@ function init() {
   d3.json("samples.json").then((data) => {
     // d3.json() = read the data from samples.json
     // data = the (arbitrary) name for all the data in samples.json
-    console.log(data);
+    // console.log(data);
     // Prints all the data. See that names array = praticipant ID numbers
     var sampleNames = data.names;
     // sampleNames = variable given to the participant ID numbers
@@ -23,14 +23,15 @@ function init() {
         //The text of each dropdown menu option is the ID
         .property("value", sample);
         // Its value property is also assigned the ID.
-    });
+      });
 
     // Use the first sample from the list to build the initial plots
     var firstSample = sampleNames[0];
     buildCharts(firstSample);
     buildMetadata(firstSample);
 
-})}
+  });
+}
 
 // All the code is enclosed inside the init() function is called
 init();
