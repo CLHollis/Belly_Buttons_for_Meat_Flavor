@@ -4,7 +4,7 @@ body {
 }
 
 .jumbotron {
-  background-image: url("../images/belly_buttons_washout.jpg");
+  background-image: url("../../images/belly_buttons_washout.jpg");
   /* original source belly button image: https://brikwars.com/forums/viewtopic.php?t=11798 */
   /* original source veggie burger image: https://www.thespruceeats.com/thmb/tUVLwrsjovTjOcNTG801_iJg82A=/940x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/portobello-mushroom-burger-with-avocados-3378624-hero-01-2b28fe4315934ba9b3c940ad5ab7fe17.jpg */
   background-size: 100% 100%;
