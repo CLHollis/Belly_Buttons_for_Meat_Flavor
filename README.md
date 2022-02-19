@@ -20,7 +20,7 @@ Discover & document bacteria that synthesize proteins that taste like beef. Part
 - HTML file [index.html](index.html)
 - JavaScript file [charts.js](static/js/charts.js)
 - CSS Style file [style.css](static/css/style.css)
-- Various images [Image Folder](static/images/)
+- Various images [Image Folder](images/)
 
 # Challenge
 Take the module code, where we built the webpage with the drop-down filter and dempgraphics table, and add the following:
@@ -49,8 +49,8 @@ Fully Functionsing Site: [Belly Button Biodiversity Dashboard](https://clhollis.
 1. Website starts on the first ID/person, No. 940, as ahown in this frst image.
 2. Then when a different ID/person is chosen, all the charts update to that ID's results.
 
-<image src="static/images/local_site_complete.jpg" width="700" height="860">
-<image src="static/images/local_site_complete_working.jpg" width="700" height="870">
+<image src="images/local_site_complete.jpg" width="700" height="860">
+<image src="images/local_site_complete_working.jpg" width="700" height="870">
 
 
 
