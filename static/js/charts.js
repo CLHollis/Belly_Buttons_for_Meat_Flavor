@@ -1,60 +1,71 @@
+
+// Creates a dropdown menu of ID numbers dynamically
 function init() {
-  // Grab a reference to the dropdown select element
+  // init = the function name
   var selector = d3.select("#selDataset");
+  // selector = the drop down menu
+  //d3.select() method = select the dropdown menu, id: selDataset
 
-  // Use the list of sample names to populate the select options
   d3.json("samples.json").then((data) => {
+    // d3.json() = read the data from samples.json
+    // data = the (arbitrary) name for all the data in samples.json
+    console.log(data);
+    // Prints all the data. See that names array = praticipant ID numbers
     var sampleNames = data.names;
-
+    // sampleNames = variable given to the participant ID numbers
     sampleNames.forEach((sample) => {
+      // The forEach() method is called on the sampleNames array
+      //For each element in the array...
       selector
         .append("option")
+        //... a dropdown menu option is appended
         .text(sample)
+        //The text of each dropdown menu option is the ID
         .property("value", sample);
+        // Its value property is also assigned the ID.
     });
 
     // Use the first sample from the list to build the initial plots
     var firstSample = sampleNames[0];
     buildCharts(firstSample);
     buildMetadata(firstSample);
-  });
-}
 
-// Initialize the dashboard
+})}
+
+// All the code is enclosed inside the init() function is called
 init();
 
+
 function optionChanged(newSample) {
-  // Fetch new data each time a new sample is selected
+  //newSample = this.value (from the html)
+  
+  //replace: console.log(newSample); with:
   buildMetadata(newSample);
   buildCharts(newSample);
-  
 }
 
-// Demographics Panel when dropdown number is selected ID number is passed as sample into this function
 function buildMetadata(sample) {
-  //pulls the entire data set contained in samples.json and reads it as data
+  //when a dropdown menu option is selected, the ID# is passed in as sample
   d3.json("samples.json").then((data) => {
-    //metadata array in teh samples json is set to variable metadata
+    //pulls in entire samples.json dataset and calls it "data"
     var metadata = data.metadata;
-    // Filter the data for the object with the desired sample number
+    //metadata = metadata array in samples.json
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
-    //results of filter method are return as an array - first item in array is assigned to result variable
+    //filter metadata -> find matching id passed in by "sample"
     var result = resultArray[0];
-    // Use d3 to select the panel with id of `#sample-metadata`
+    //results = the 1st item [0] where the id is located
+    
     var PANEL = d3.select("#sample-metadata");
+    //panel = (d3.select the <div>) with id sample-metadata 
+    //        (ie. the Demographic Info panel)
 
-    // Use `.html("") to clear any existing metadata
     PANEL.html("");
-    //skill drill CODE
-
-    // Use `Object.entries` to add each key and value pair to the panel
-    // Hint: Inside the loop, you will need to use d3 to append new
-    // tags for each key-value in the metadata.
+    //Clear contents of the panel when another ID number is chosen 
     Object.entries(result).forEach(([key, value]) => {
       PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
     });
-  //just puts location
-  //var wFreq = PANEL.append("h6").text(result.wFreq)
+    //.append("h6") = append a H6 heading to the panel 
+    //.text(result.location) = print the location of the volunteer to the panel
   });
 }
 
